@@ -18,7 +18,13 @@ Open `http://localhost:4321`. The site runs without any key; the Ask AI dialog t
 
 ## Add your key
 
-1. Get a free key at [onetagai.com](https://onetagai.com/?ref=astro-docs-ai). It arrives by email.
+1. Get a free key. Fill in your email at [onetagai.com](https://onetagai.com/?ref=astro-docs-ai), or POST it from the terminal; either way the key arrives in that inbox, one key per email:
+
+   ```bash
+   curl -X POST https://onetagai.com/api/signup -H "Content-Type: application/json" -d '{"email":"you@example.com"}'
+   ```
+
+   An AI coding tool can run that request for you and ask you to paste the key.
 2. Create a `.env` file in the project root:
 
 ```ini
