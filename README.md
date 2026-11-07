@@ -1,0 +1,54 @@
+# Lantern
+
+Free Astro docs template with built-in AI Q&A that answers from your own pages. Starlight, Pagefind retrieval, OneTag AI, llms.txt, Lighthouse 100, one-click deploy, MIT.
+
+**Live demo:** https://fengyiqicoder.github.io/astro-docs-ai/ · open the **Ask AI** button in the header or press `Ctrl` + `/`.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ffengyiqicoder%2Fastro-docs-ai&env=PUBLIC_ONETAG_KEY&envDescription=Free%20key%20from%20onetagai.com&envLink=https%3A%2F%2Fonetagai.com%2F%3Fref%3Dastro-docs-ai&project-name=my-docs&repository-name=my-docs)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/fengyiqicoder/astro-docs-ai)
+
+## What it does
+
+A reader types a question. The site searches its own pages with the [Pagefind](https://pagefind.app) index that Starlight already builds, hands the best five pages and the question to [OneTag AI](https://onetagai.com/?ref=astro-docs-ai), and streams the answer back with links to the pages it used. Follow-up questions keep the thread. The whole thing runs in the browser: no backend, no API keys in the code, nothing stored.
+
+- Answers only from your pages; says so when a question is not covered.
+- Works in any language the reader asks in.
+- Loads the AI script only when the dialog opens, so page speed is untouched.
+- `llms.txt` generated on every build for AI coding tools and search engines.
+- Everything else is standard [Starlight](https://starlight.astro.build): sidebar, search, dark mode, i18n.
+
+## Use it
+
+```bash
+npm create astro@latest my-docs -- --template fengyiqicoder/astro-docs-ai
+cd my-docs && npm install && npm run dev
+```
+
+Then get a free key at [onetagai.com](https://onetagai.com/?ref=astro-docs-ai) (it arrives by email) and put it in `.env`:
+
+```ini
+PUBLIC_ONETAG_KEY=ot_your_key_here
+```
+
+Without a key the site works as a normal Starlight site; the Ask AI dialog just says it is not set up yet. The key is public by design, like an analytics ID: it can only spend that account's allowance of 1,000,000 free tokens.
+
+## Deploy
+
+- **GitHub Pages:** the included workflow builds and publishes on every push to `main`. Set Pages source to *GitHub Actions* and add a repository secret `ONETAG_KEY`.
+- **Vercel / Netlify:** the buttons above, with `PUBLIC_ONETAG_KEY` as an environment variable.
+
+Full docs, written as the demo content: [Getting started](https://fengyiqicoder.github.io/astro-docs-ai/guides/getting-started/), [How Ask AI works](https://fengyiqicoder.github.io/astro-docs-ai/guides/ask-ai/), [Deploy](https://fengyiqicoder.github.io/astro-docs-ai/guides/deploy/).
+
+## Project layout
+
+```
+src/components/Search.astro   the Ask AI button, dialog, retrieval and the call to onetag.ask
+src/content/docs/             your pages (Markdown / MDX)
+src/styles/custom.css         four accent colors
+astro.config.mjs              title, logo, sidebar, the Search override, llms.txt plugin
+.github/workflows/deploy.yml  GitHub Pages
+```
+
+## License
+
+MIT. Built on Starlight and Pagefind; AI answers by OneTag AI.

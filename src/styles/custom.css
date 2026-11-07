@@ -1,0 +1,13 @@
+/* Lantern: a warm amber accent on Starlight's defaults. Change these four values to re-brand. */
+:root {
+	--sl-color-accent-low: #3b2a0a;
+	--sl-color-accent: #d99a1f;
+	--sl-color-accent-high: #f5d78a;
+	--sl-color-white: #fbf8f2;
+}
+:root[data-theme='light'] {
+	--sl-color-accent-low: #fbeccb;
+	--sl-color-accent: #a86d00;
+	--sl-color-accent-high: #5c3b00;
+	--sl-color-white: #1c1a16;
+}
