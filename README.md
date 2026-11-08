@@ -55,6 +55,12 @@ astro.config.mjs              title, logo, sidebar, the Search override, llms.tx
 .github/workflows/deploy.yml  GitHub Pages
 ```
 
+## See also
+
+- [Pitch](https://github.com/fengyiqicoder/astro-landing-ai): the matching landing page template, with a fit check and an ask-the-page box.
+- [Static AI Block](https://github.com/fengyiqicoder/static-ai-block): twelve copy-paste AI blocks for any static page.
+- [starlight-onetag](https://github.com/fengyiqicoder/starlight-onetag): the Ask AI dialog from this template as a Starlight plugin for existing sites.
+
 ## License
 
 MIT. Built on Starlight and Pagefind; AI answers by OneTag AI.
