@@ -1,5 +1,8 @@
 # Lantern
 
+> This template now lives in [astro-ai-starter](https://github.com/fengyiqicoder/astro-ai-starter) as `examples/docs`, next to a blog and a landing page with the same AI wiring. This repository is kept as a standalone copy for `npm create astro` and theme directories, and is synced from there.
+
+
 Free Astro docs template with built-in AI Q&A that answers from your own pages. Starlight, Pagefind retrieval, OneTag AI, llms.txt, Lighthouse 100, one-click deploy, MIT.
 
 **Live demo:** https://fengyiqicoder.github.io/astro-docs-ai/ · open the **Ask AI** button in the header or press `Ctrl` + `/`.
